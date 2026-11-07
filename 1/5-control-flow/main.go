@@ -39,5 +39,3 @@ func Execute(a, b int, op string) (int, error) {
 	}
 	return res, nil
 }
-
-// TODO for and if-else, scoping

@@ -51,13 +51,14 @@ func TestExecute(t *testing.T) {
 			want: 4,
 		},
 		/*
-			{
-				name: "mod",
-				op:   "%",
-				a:    8,
-				b:    3,
-				want: 2,
-			},
+			Exercise: make this test pass.
+				{
+					name: "mod",
+					op:   "%",
+					a:    8,
+					b:    3,
+					want: 2,
+				},
 		*/
 	}
 	for _, tt := range tests {
