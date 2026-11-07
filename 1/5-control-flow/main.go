@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	var a, b int
@@ -9,6 +11,14 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	res, err := Execute(a, b, op)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(res)
+}
+
+func Execute(a, b int, op string) (int, error) {
 	var res int
 	switch op {
 	case "*":
@@ -25,9 +35,9 @@ func main() {
 			res = res * a
 		}
 	default:
-		panic("bad operator: " + op)
+		return 0, fmt.Errorf("unknown operator: %q", op)
 	}
-	fmt.Println(res)
+	return res, nil
 }
 
 // TODO for and if-else, scoping
