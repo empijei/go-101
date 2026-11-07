@@ -18,5 +18,7 @@ func main() {
 		data = append(data, i)
 	}
 	slices.Sort(data)
-	fmt.Println(data)
+	for i, v := range data {
+		fmt.Printf("data[%v]: %v\n", i, v)
+	}
 }
